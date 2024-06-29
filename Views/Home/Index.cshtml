@@ -1,0 +1,65 @@
+﻿@using Microsoft.AspNetCore.Identity
+@using davidgyongyosi_ASP_2022231.Helpers
+@model PagedList<Game>
+@inject SignInManager<SiteUser> SignInManager
+@inject UserManager<SiteUser> UserManager
+
+<div class="grid-wrapper">
+    @foreach (var game in Model.GroupBy(t => t.Name))
+    {
+        <div class="card" style="width: 18rem;">
+            @foreach (var item in game)
+            {
+                <i class="fa-solid fa-circle-info"></i>
+                <img class="card-img-top" src="@Url.Action("GetImage", "Game", new {id = item.Uid})" />
+                <div class="card-body">
+                    <h5 class="card-title">@game.Key</h5>
+                    <div class="card-text">
+                        <p class="game-category">@item.Genre.Name</p>
+                        @if (item.Price == 0)
+                        {
+                            <p class="card-text game-price">Free</p>
+                        }
+                        else
+                        {
+                            <p class="card-text game-price">$@item.Price</p>
+                        }
+                        <p class="game-date">@item.releaseDate</p>
+                    </div>
+                        @if (item.Owners.Contains(await UserManager.GetUserAsync(User)))
+                            {
+                            <a href="Game/RemoveFromLibrary?id=@item.Uid">
+                                <img class="game-action" src="@Url.Action("GetImage", "Home", new {userid = UserManager.GetUserId(User)})" />
+                            </a>
+                        }
+                        else
+                        {
+                            <h4 class="game-action"><a href="Game/AddToLibrary?id=@item.Uid"><i class="bi bi-plus-circle-fill"></i></a></h4>
+                        }
+                </div>
+            }
+
+        </div>
+    }
+</div>
+@{
+    var prevDisabled = !Model.HasPreviousPage ? "disabled" : "";
+    var nextDisabled = !Model.HasNextPage ? "disabled" : "";
+}
+<div id="pager-txt">Page @(Model.TotalPages < Model.PageIndex ? 0 : Model.PageIndex) of @Model.TotalPages</div>
+<a asp-action="Index"
+   asp-route-sortOrder="@ViewBag.CurrentSort"
+   asp-route-currentFilter="@ViewBag.CurrentFilter"
+   asp-route-pageNumber="@(Model.PageIndex - 1)"
+   class="pager-btn btn @prevDisabled">
+    Previous
+</a>
+<a asp-action="Index"
+   asp-route-sortOrder="@ViewBag.CurrentSort"
+   asp-route-currentFilter="@ViewBag.CurrentFilter"
+   asp-route-pageNumber="@(Model.PageIndex + 1)"
+   class="pager-btn btn @nextDisabled">
+    Next
+</a>
+
+

@@ -1,0 +1,26 @@
+﻿@using Microsoft.AspNetCore.Identity
+@model IEnumerable<Game>
+
+<div class="table-container">
+    <table class="table-responsive" >
+        <thead>
+            <tr>
+                <th><h5>Image</h5></th>
+                <th><h5>Name</h5></th>
+                <th><h5>Edit</h5></th>
+                <th><h5>Delete</h5></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var game in Model)
+            {
+                <tr>
+                    <td><img height="50px" src="@Url.Action("GetImage", "Game", new { id = game.Uid } )" /></td>
+                    <td>@game.Name</td>
+                    <td><a href="@Url.Action("Edit", "Game", new {id = game.Uid})" class="btn btn-warning">Edit</a></td>
+                    <td><a href="@Url.Action("Delete", "Game", new {id = game.Uid})" class="btn btn-danger">Delete</a></td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

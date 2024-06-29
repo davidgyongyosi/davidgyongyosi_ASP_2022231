@@ -1,0 +1,24 @@
+﻿@using Microsoft.AspNetCore.Identity
+@model IEnumerable<Genre>
+
+<div class="table-container">
+    <table class="table-responsive">
+        <thead>
+            <tr>
+                <th><h5>Name</h5></th>
+                <th><h5>Edit</h5></th>
+                <th><h5>Delete</h5></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var genre in Model)
+            {
+                <tr>
+                    <td>@genre.Name</td>
+                    <td><a href="@Url.Action("Edit", "Genre", new {id = genre.Uid})" class="btn btn-warning">Edit</a></td>
+                    <td><a href="@Url.Action("Delete", "Genre", new {id = genre.Uid})" class="btn btn-danger">Delete</a></td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

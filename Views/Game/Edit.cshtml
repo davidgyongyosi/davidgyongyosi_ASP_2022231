@@ -1,0 +1,58 @@
+﻿@model Game
+
+<h1 class="page-title">Game Editor</h1>
+<hr />
+<div class="row form-container">
+    <div class="col-md-5">
+        <form asp-action="Edit" enctype="multipart/form-data">
+            <h3>Edit @Model.Name</h3>
+            <hr />
+            @Html.HiddenFor(t => t.Uid)
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-floating">
+                <input asp-for="Name" class="form-control" />
+                <label asp-for="Name" class="form-label"></label>
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="form-floating">
+                <input asp-for="releaseDate" class="form-control" />
+                <label asp-for="releaseDate" class="form-label"></label>
+                <span asp-validation-for="releaseDate" class="text-danger"></span>
+            </div>
+            <div class="form-floating">
+                <input asp-for="Price" class="form-control" />
+                <label asp-for="Price" class="form-label"></label>
+                <span asp-validation-for="Price" class="text-danger"></span>
+            </div>
+            <div class="form-floating">
+                <select asp-for="GenreId" class="form-control" asp-items="ViewBag.GenreID"></select>
+            </div>
+            <div class="form-floating">
+                <input type="submit" value="Edit" class="w-100 btn btn-md btn-warning" />
+            </div>
+        </form>
+        <div>
+            <a asp-action="Index" asp-controller="Home" class="w-100 btn btn-md btn-danger">Back to List</a>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
+
+<script>$.validator.methods.range = function (value, element, param) {
+        var globalizedValue = value.replace(",", ".");
+        return this.optional(element) || (globalizedValue >= param[0] && globalizedValue <= param[1]);
+    }
+
+    $.validator.methods.number = function (value, element) {
+        return this.optional(element) || /-?(?:\d+|\d{1,3}(?:[\s\.,]\d{3})+)(?:[\.,]\d+)?$/.test(value);
+    }
+    //Date dd/MM/yyyy
+    $.validator.methods.date = function (value, element) {
+        var date = value.split("/");
+        return this.optional(element) || !/Invalid|NaN/.test(new Date(date[2], date[1], date[0]).toString());
+    }
+</script>
+

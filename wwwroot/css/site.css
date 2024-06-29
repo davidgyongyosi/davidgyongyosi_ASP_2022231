@@ -1,0 +1,340 @@
+﻿@import url(https://fonts.googleapis.com/css?family=Montserrat:500,700);
+
+:root {
+    --color-primary: #1B2838; /*lighter blue*/
+    --color-secondary: #162433; /*darker blue*/
+    --btn-primary: #0C7C59;
+    --btn-secondary: #D64933;
+    --btn-edit: #E6AF2E;
+    --color-category-text: #66C1F5;
+    --color-category-bg: #2B475E;
+    --color-price-text: #C7D5E0;
+    --color-price-bg: #3E572B;
+    --color-text-primary: #CEAD75;
+    --color-text-secondary: #B3B5BD;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font: inherit;
+    background-color: var(--color-primary);
+}
+
+    *,
+    *::before,
+    *::after {
+        box-sizing: border-box;
+    }
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    margin-bottom: 60px;
+    color: var(--color-text-secondary);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    font-family: "Montserrat", sans-serif;
+    padding: 1rem .5rem .5rem .5rem;
+    border-bottom: 1px solid black;
+    position: fixed;
+    z-index: 1;
+}
+
+.nav-logo {
+    color: var(--color-text-primary);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 18px;
+    font-weight: 700;
+    text-decoration: none;
+    padding: 0 .4rem 0 .4rem;
+}
+
+    .nav-logo:hover {
+        color: var(--color-text-primary);
+    }
+
+.nav-item {
+    padding: 0 .4rem 0 .4rem;
+}
+
+.sidenav-link {
+    display: block;
+    padding: .5rem 1rem;
+    color: var(--color-text-primary);
+    text-decoration: none;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out;
+    border: 0;
+    border-radius: .25rem;
+}
+
+    .sidenav-link.active {
+        color: var(--color-secondary);
+        background-color: var(--color-text-primary);
+    }
+
+.nav-a {
+    color: var(--color-text-secondary);
+    text-transform: uppercase;
+    font-size: 12px;
+    text-decoration: none;
+    font-weight: 500;
+    -webkit-transition: .5s;
+}
+
+    .nav-a:hover {
+        color: var(--color-text-primary);
+        text-decoration: underline;
+    }
+
+.main-container {
+    padding-top: 5rem;
+}
+
+.custom-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: "Montserrat", sans-serif;
+    font-size: 14px;
+    position: absolute;
+    bottom: 0;
+    line-height: 40px;
+    width: 100%;
+    border-top: 1px solid black;
+    padding: 0 20px 0 20px;
+}
+
+    .custom-footer p {
+        font-weight: 500;
+        letter-spacing: 2px;
+        margin: 0;
+        color: var(--color-text-secondary);
+    }
+
+.footer-link {
+    margin: 5px;
+    color: #CEAD75;
+}
+
+.grid-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    width: min(90%, 1500px);
+    margin: 0 auto;
+}
+
+.card {
+    background-color: var(--color-secondary);
+    border: none;
+    border-radius: 15px;
+    box-shadow: black 0px 0px 5px;
+    transition: transform .3s;
+    max-width: 500px;
+    height: 300px;
+
+}
+    .card:hover {
+        transform: scale(1.05);
+        border: none;
+    }
+
+.card-img-top {
+    border-radius: 15px 15px 0 0;
+}
+
+.card-body {
+    color: var(--color-text-primary);
+    border-radius: 0 0 15px 15px;
+    display: grid;
+    grid-template-rows: repeat(1, 0fr);
+}
+
+.card-title {
+    color: var(--color-text-primary);
+    font-weight: 900;
+    margin-bottom: 1rem;
+    height: fit-content;
+
+}
+
+.card-text {
+    font-weight: 500;
+    font-size: 15px;
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+}
+
+.game-date {
+    font-size: 13px;
+    color: var(--color-text-secondary);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin-bottom: 1rem;
+    margin-left: 1rem;
+    transition: transform .3s;
+}
+
+.game-category {
+    background-color: var(--color-category-bg);
+    color: var(--color-category-text);
+    border-radius: 3px;
+    padding: 0 3px 0 3px;
+    margin-right: 0.5rem;
+}
+
+    .game-category:hover {
+        background-color: #3A789C;
+        color: #B8FBFF;
+    }
+
+.game-price {
+    color: var(--color-price-text);
+    background-color: var(--color-secondary);
+    border: 1px solid var(--color-price-bg);
+    padding: 0 3px 0 3px;
+    text-transform: uppercase;
+}
+
+    .game-price:hover {
+        background-color: var(--color-price-bg);
+    }
+
+.pager-btn {
+    background-color: var(--color-text-primary);
+    opacity: 80%;
+    color: var(--color-primary);
+    border: none;
+}
+
+    .pager-btn:hover {
+        background-color: var(--color-text-primary);
+        color: white;
+        opacity: 100%;
+    }
+
+.page-title {
+    text-align: center;
+    color: var(--color-text-secondary);
+}
+
+.form-container {
+    justify-content: center;
+}
+
+h3 {
+    color: var(--color-text-secondary);
+}
+
+hr {
+    color: var(--color-text-secondary);
+}
+
+.form-floating {
+    color: var(--color-text-secondary);
+    margin-bottom: .7rem;
+}
+
+.form-label {
+    color: var(--color-text-primary);
+    background-color: transparent;
+}
+
+.form-control, .form-control:focus {
+    background-color: var(--color-primary);
+    color: var(--color-text-primary);
+}
+
+    .form-control:disabled {
+        background-color: var(--color-secondary);
+        opacity: 50%;
+        border-color: black;
+    }
+
+.btn-primary {
+    background-color: var(--btn-primary);
+    color: var(--color-secondary);
+    opacity: 80%;
+    border: none;
+}
+
+    .btn-primary:hover {
+        background-color: var(--btn-primary);
+        opacity: 100%;
+    }
+
+.btn-danger {
+    background-color: var(--btn-secondary);
+    color: var(--color-secondary);
+    opacity: 80%;
+    border: none;
+}
+
+    .btn-danger:hover {
+        background-color: var(--btn-secondary);
+        opacity: 100%;
+    }
+
+.btn-warning {
+    background-color: var(--btn-edit);
+    color: var(--color-secondary);
+    opacity: 80%;
+    border: none;
+}
+
+    .btn-warning:hover {
+        background-color: var(--btn-edit);
+        opacity: 100%;
+    }
+
+
+.game-action {
+    width: 25px;
+    height: 25px;
+    border-radius: 25px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin-bottom: 1rem;
+    margin-right: 1rem;
+    transition: transform .3s;
+}
+
+    .game-action:hover {
+        transform: scale(1.2);
+    }
+
+.table-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.table-responsive {
+    min-width: 700px;
+    text-align: center;
+}
+
+    .table-responsive th {
+        color: var(--color-text-primary);
+    }
+
+    .table-responsive tr {
+        border-bottom: 1px solid var(--color-text-primary);
+    }
+
+tbody {
+    line-height: 4;
+}

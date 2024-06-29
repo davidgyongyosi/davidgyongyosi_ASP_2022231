@@ -1,0 +1,123 @@
+﻿<Properties StartupConfiguration="{1631F870-5E0C-4EFE-9D50-5F932498DB8D}|Default">
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Program.cs">
+    <Files>
+      <File FileName="Program.cs" Line="34" Column="2" />
+      <File FileName="davidgyongyosi_ASP_2022231.csproj" Line="15" Column="38" />
+      <File FileName="Areas/Identity/Pages/Account/Manage/_ManageNav.cshtml" Line="1" Column="1" />
+      <File FileName="Areas/Identity/Pages/Account/Manage/_ViewImports.cshtml" Line="1" Column="22" />
+      <File FileName="Areas/Identity/Pages/Account/Manage/ManageNavPages.cs" Line="120" Column="29" />
+      <File FileName="Areas/Identity/Pages/Account/_ViewImports.cshtml" Line="1" Column="22" />
+      <File FileName="Areas/Identity/Pages/Account/ExternalLogin.cshtml" Line="1" Column="1" />
+      <File FileName="Areas/Identity/Pages/Account/ExternalLogin.cshtml.cs" Line="20" Column="21" />
+      <File FileName="Areas/Identity/Pages/Account/Login.cshtml" Line="1" Column="1" />
+      <File FileName="Areas/Identity/Pages/Account/Login.cshtml.cs" Line="22" Column="6" />
+      <File FileName="Areas/Identity/Pages/Account/Logout.cshtml" Line="1" Column="1" />
+      <File FileName="Areas/Identity/Pages/Account/Logout.cshtml.cs" Line="14" Column="66" />
+      <File FileName="Areas/Identity/Pages/Account/Register.cshtml" Line="1" Column="1" />
+      <File FileName="Areas/Identity/Pages/Account/Register.cshtml.cs" Line="15" Column="37" />
+      <File FileName="Areas/Identity/Pages/_ValidationScriptsPartial.cshtml" Line="1" Column="1" />
+      <File FileName="Areas/Identity/Pages/_ViewImports.cshtml" Line="6" Column="1" />
+      <File FileName="Areas/Identity/Pages/_ViewStart.cshtml" Line="4" Column="1" />
+      <File FileName="Controllers/GameController.cs" Line="19" Column="45" />
+      <File FileName="Controllers/GenreController.cs" Line="13" Column="49" />
+      <File FileName="Controllers/HomeController.cs" Line="12" Column="2" />
+      <File FileName="Controllers/PlatformController.cs" Line="11" Column="63" />
+      <File FileName="Data/Interfaces/IGameRepository.cs" Line="15" Column="37" />
+      <File FileName="Data/Interfaces/IGenreRepository.cs" Line="12" Column="38" />
+      <File FileName="Data/Interfaces/IPlatformRepository.cs" Line="11" Column="34" />
+      <File FileName="Data/Migrations/00000000000000_CreateIdentitySchema.cs" Line="13" Column="18" />
+      <File FileName="Data/Migrations/20221115164551_game_base.cs" Line="13" Column="38" />
+      <File FileName="Data/Migrations/00000000000000_CreateIdentitySchema.Designer.cs" Line="12" Column="55" />
+      <File FileName="Data/Migrations/20221115164551_game_base.Designer.cs" Line="1" Column="1" />
+      <File FileName="Data/Migrations/20221115172736_user_extension.cs" Line="1" Column="1" />
+      <File FileName="Data/Migrations/20221115172736_user_extension.Designer.cs" Line="13" Column="46" />
+      <File FileName="Data/Migrations/20221115185001_lazy_loading.cs" Line="16" Column="40" />
+      <File FileName="Data/Migrations/20221115185001_lazy_loading.Designer.cs" Line="20" Column="67" />
+      <File FileName="Data/Migrations/20221116193448_profile_picture.cs" Line="14" Column="38" />
+      <File FileName="Data/Migrations/20221116193448_profile_picture.Designer.cs" Line="13" Column="46" />
+      <File FileName="Data/Migrations/20221119135653_more_tables.cs" Line="18" Column="48" />
+      <File FileName="Data/Migrations/20221119135653_more_tables.Designer.cs" Line="10" Column="1" />
+      <File FileName="Data/Migrations/20221119144931_game_images.cs" Line="18" Column="48" />
+      <File FileName="Data/Migrations/20221119144931_game_images.Designer.cs" Line="14" Column="46" />
+      <File FileName="Data/Migrations/20221121135538_attibute_update.cs" Line="17" Column="34" />
+      <File FileName="Data/Migrations/20221121135538_attibute_update.Designer.cs" Line="17" Column="76" />
+      <File FileName="Data/Migrations/20221123232607_generated_relations.cs" Line="17" Column="33" />
+      <File FileName="Data/Migrations/20221123232607_generated_relations.Designer.cs" Line="9" Column="18" />
+      <File FileName="Data/Migrations/ApplicationDbContextModelSnapshot.cs" Line="9" Column="1" />
+      <File FileName="Data/Repositories/GameRepository.cs" Line="13" Column="1" />
+      <File FileName="Data/Repositories/GenreRepository.cs" Line="12" Column="22" />
+      <File FileName="Data/Repositories/PlatformRepository.cs" Line="14" Column="1" />
+      <File FileName="Data/ApplicationDbContext.cs" Line="15" Column="24" />
+      <File FileName="Helpers/PagedList.cs" Line="4" Column="25" />
+      <File FileName="Models/ErrorViewModel.cs" Line="4" Column="2" />
+      <File FileName="Models/Game.cs" Line="20" Column="1" />
+      <File FileName="Models/Genre.cs" Line="12" Column="1" />
+      <File FileName="Models/Platform.cs" Line="10" Column="71" />
+      <File FileName="Models/SiteUser.cs" Line="12" Column="61" />
+      <File FileName="Properties/launchSettings.json" Line="13" Column="29" />
+      <File FileName="Views/Game/Add.cshtml" Line="1" Column="1" />
+      <File FileName="Views/Game/Edit.cshtml" Line="1" Column="1" />
+      <File FileName="Views/Genre/Add.cshtml" Line="25" Column="1" />
+      <File FileName="Views/Genre/Edit.cshtml" Line="1" Column="1" />
+      <File FileName="Views/Genre/Index.cshtml" Line="1" Column="1" />
+      <File FileName="Views/Home/AdminEdit.cshtml" Line="1" Column="1" />
+      <File FileName="Views/Home/Index.cshtml" Line="10" Column="49" />
+      <File FileName="Views/Home/Privacy.cshtml" Line="1" Column="1" />
+      <File FileName="Views/Home/Users.cshtml" Line="17" Column="6" />
+      <File FileName="Views/Platform/Add.cshtml" Line="1" Column="1" />
+      <File FileName="Views/Platform/Edit.cshtml" Line="1" Column="1" />
+      <File FileName="Views/Platform/Index.cshtml" Line="1" Column="1" />
+      <File FileName="Views/Shared/_AdminPartial.cshtml" Line="1" Column="1" />
+      <File FileName="Views/Shared/_Layout.cshtml" Line="13" Column="8" />
+      <File FileName="Views/Shared/_Layout.cshtml.css" Line="1" Column="1" />
+      <File FileName="Views/Shared/_LoginPartial.cshtml" Line="1" Column="1" />
+      <File FileName="Views/Shared/_ValidationScriptsPartial.cshtml" Line="1" Column="1" />
+      <File FileName="Views/Shared/Error.cshtml" Line="1" Column="1" />
+      <File FileName="Views/_ViewImports.cshtml" Line="5" Column="1" />
+      <File FileName="Views/_ViewStart.cshtml" Line="1" Column="1" />
+      <File FileName="wwwroot/css/site.css" Line="1" Column="1" />
+      <File FileName="wwwroot/js/site.js" Line="1" Column="1" />
+      <File FileName=".gitattributes" Line="1" Column="1" />
+      <File FileName="appsettings.json" Line="1" Column="1" />
+      <File FileName="appsettings.Development.json" Line="1" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="davidgyongyosi_ASP_2022231" expanded="True">
+            <Node name="davidgyongyosi_ASP_2022231">
+              <Node name="Dependencies" expanded="True">
+                <Node name="PackageDependencies" expanded="True" />
+              </Node>
+              <Node name="Areas" expanded="True" />
+              <Node name="Controllers" expanded="True" />
+              <Node name="Helpers" expanded="True" />
+              <Node name="Views" expanded="True">
+                <Node name="Game" expanded="True" />
+                <Node name="Genre" expanded="True" />
+                <Node name="Home" expanded="True" />
+                <Node name="Platform" expanded="True" />
+                <Node name="Shared" expanded="True">
+                  <Node name="_Layout.cshtml" expanded="True" />
+                </Node>
+              </Node>
+              <Node name="wwwroot" expanded="True">
+                <Node name="css" expanded="True" />
+                <Node name="js" expanded="True" />
+              </Node>
+              <Node name="appsettings.json" expanded="True" />
+              <Node name="Program.cs" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.davidgyongyosi__ASP__2022231 PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+</Properties>

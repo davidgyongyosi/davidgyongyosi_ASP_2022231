@@ -1,0 +1,24 @@
+﻿@using Microsoft.AspNetCore.Identity
+@model IEnumerable<Platform>
+
+<div class="table-container">
+    <table class="table-responsive">
+        <thead>
+            <tr>
+                <th><h5>Name</h5></th>
+                <th><h5>Edit</h5></th>
+                <th><h5>Delete</h5></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var platform in Model)
+            {
+                <tr>
+                    <td>@platform.Name</td>
+                    <td><a href="@Url.Action("Edit", "Platform", new {id = platform.Uid})" class="btn btn-warning">Edit</a></td>
+                    <td><a href="@Url.Action("Delete", "Platform", new {id = platform.Uid})" class="btn btn-danger">Delete</a></td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

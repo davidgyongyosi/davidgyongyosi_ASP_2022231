@@ -1,0 +1,33 @@
+﻿@using Microsoft.AspNetCore.Identity
+@model IEnumerable<SiteUser>
+@inject SignInManager<SiteUser> SignInManager
+@inject UserManager<SiteUser> UserManager
+
+<div class="table-container">
+<table class="table-responsive">
+    <thead>
+        <tr>
+            <th><h5>Name</h5></th>
+            <th><h5>Admin action</h5></th>
+            <th><h5>Delete</h5></th>
+        </tr>
+    </thead>
+    <tbody>
+    @foreach (var user in Model)
+    {
+        <tr>
+            <td>@user.FirstName @user.LastName</td>
+            @if (await UserManager.IsInRoleAsync(user, "Admin"))
+            {
+                <td><a href="Home/RemoveAdmin?uid=@user.Id" class="btn btn-danger">Revoke</a></td>
+            }
+            else
+            {
+                <td><a href="Home/GrantAdmin?uid=@user.Id" class="btn btn-primary">Grant</a></td>
+            }
+            <td><a href="DeleteUser?uid=@user.Id" class="btn btn-danger">Delete</a></td>
+        </tr>
+    }
+    </tbody>
+</table>
+</div>

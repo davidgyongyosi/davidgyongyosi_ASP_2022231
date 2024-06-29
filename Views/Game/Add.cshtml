@@ -1,0 +1,54 @@
+﻿@model Game
+
+<h1 class="page-title">Game creator</h1>
+<hr />
+<div class="row form-container">
+    <div class="col-md-5">
+        <form asp-action="Add" asp-controller="Game" enctype="multipart/form-data" method="post">
+            <h3>Add a new game.</h3>
+            <hr />
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-floating">
+                <input asp-for="Name" class="form-control" />
+                <label asp-for="Name" class="form-label"></label>
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="form-floating">
+                <input asp-for="releaseDate" class="form-control" />
+                <label asp-for="releaseDate" class="form-label"></label>
+                <span asp-validation-for="releaseDate" class="text-danger"></span>
+            </div>
+            <div class="form-floating">
+                <input asp-for="Price" class="form-control" />
+                <label asp-for="Price" class="form-label"></label>
+            </div>
+            <div class="form-floating">
+                <select asp-for="GenreId" class="form-control" asp-items="ViewBag.GenreID"></select>
+                <label asp-for="GenreId" class="form-label"></label>
+                <span asp-validation-for="GenreId" class="text-danger"></span>
+            </div>
+            <div class="form-floating">
+                @foreach (var item in (MultiSelectList)ViewBag.Platforms)
+                    {
+                        <p><input type="checkbox" value="@item.Value" id="PlatformIds" name="PlatformIds"/>@item.Text</p>
+                    }
+                <label asp-for="Platforms" class="form-label"></label>
+                <span asp-validation-for="Platforms" class="text-danger"></span>
+            </div>
+            <div class="form-floating">
+                <input type="file" name="pic" />
+            </div>
+            <div class="form-floating">
+                <input type="submit" value="Create" class="w-100 btn btn-md btn-primary" />
+            </div>
+
+        </form>
+    <div>
+        <a asp-action="Index" asp-controller="Home" class="w-100 btn btn-md btn-danger">Back to List</a>
+    </div>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
